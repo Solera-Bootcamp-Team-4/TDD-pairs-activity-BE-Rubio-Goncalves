@@ -13,16 +13,27 @@ import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMock
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.servlet.MockMvc;
 
+/**
+ * Another useful approach is to not start the server at all
+ * but to test only the layer below that, where Spring handles
+ * the incoming HTTP request and hands it off to your controller.
+ * That way, almost of the full stack is used, and your code
+ * will be called in exactly the same way as if it were processing
+ * a real HTTP request but without the cost of starting the server.
+ * To do that, use Spring’s MockMvc and ask for that to be injected
+ * for you by using the @AutoConfigureMockMvc annotation on the test case.
+ * The following listing shows how to do so:
+ */
 @SpringBootTest
 @AutoConfigureMockMvc
-public class ExampleWebApplicationControllerTest {
+public class Test2WebApplication {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform(get("/testing-web-app-test"))
+        this.mockMvc.perform(get("/HomeSweetHome"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("Hello, World")));
