@@ -16,8 +16,18 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.web.servlet.MockMvc;
 
+/**
+ * Spring automatically injects the service dependency into the controller
+ * (because of the constructor signature).
+ * The following listing shows how to test this controller with @WebMvcTest:
+ *
+ * We use @MockBean to create and inject a mock
+ * for the GreetingService (if you do not do so,
+ * the application context cannot start),
+ * and we set its expectations using Mockito.
+ */
 @WebMvcTest(GreetingController.class)
-public class WebMockTest {
+public class Test4WebMock {
 
     @Autowired
     private MockMvc mockMvc;

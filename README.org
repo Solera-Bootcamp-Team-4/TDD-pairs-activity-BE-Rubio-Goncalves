@@ -1,0 +1,8 @@
+* TDD-pairs-activity-BE-Rubio-Goncalves-Fairclough
+Week 5 Day 4 Activity: Airline app
+To read the activity's goal, click here: [[file:project.org][Project's statement]]
+
+** External database
+We're using MongoDB Atlas: https://www.mongodb.com/docs/mongodb-shell/
+
+*DO NOT PUSH THE DATABASE CREDENTIALS PLEASE*
