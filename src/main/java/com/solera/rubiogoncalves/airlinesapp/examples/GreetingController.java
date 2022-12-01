@@ -20,7 +20,7 @@ public class GreetingController {
         this.service = service;
     }
 
-    @RequestMapping("/greeting")
+    @RequestMapping("/greetingController")
     public @ResponseBody String greeting() {
         return service.greet();
     }
