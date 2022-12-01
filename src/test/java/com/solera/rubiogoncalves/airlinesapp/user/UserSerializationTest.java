@@ -16,7 +16,7 @@ class UserSerializationTest {
     private JacksonTester<User> json;
 
     private final File userSampleJson = new File("src/test/resources/modelSamples/user-example.json");
-    private final User expectedUser = new User("John", "Doe", "Fooenian", "12345678a", 20, new int[]{2,3,4});
+    private final User expectedUser = new User("John", "Doe", "Fooenian", "12345678a", 20);
 
     @Test
     void serialize() throws Exception {

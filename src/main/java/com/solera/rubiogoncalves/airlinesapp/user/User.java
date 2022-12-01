@@ -16,5 +16,4 @@ public class User {
     String nationality;
     @Id String nif;
     int age;
-    int[] bookings;
 }
