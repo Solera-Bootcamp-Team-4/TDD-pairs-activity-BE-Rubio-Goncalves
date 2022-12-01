@@ -36,8 +36,8 @@ public class Test1HttpRequest {
     public void greetingShouldReturnDefaultMessage() throws Exception {
         assertThat(
                 this.restTemplate.getForObject(
-                        "http://localhost:" + port + "/HomeSweetHome",
+                        "http://localhost:" + port + "/HomeController",
                         String.class)
-        ).contains("Hello, World");
+        ).contains("Hello from HomeController");
     }
 }

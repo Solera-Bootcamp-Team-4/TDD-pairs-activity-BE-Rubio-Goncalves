@@ -32,10 +32,10 @@ public class Test3WebLayer {
 
     @Test
     public void shouldReturnDefaultMessage() throws Exception {
-        this.mockMvc.perform(get("/HomeSweetHome"))
+        this.mockMvc.perform(get("/HomeController"))
                 .andDo(print())
                 .andExpect(status().isOk())
-                .andExpect(content().string(containsString("Hello, World")));
+                .andExpect(content().string(containsString("Hello from HomeController")));
     }
 }
 //end::test[]
