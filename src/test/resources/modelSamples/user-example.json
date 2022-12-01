@@ -1,8 +1,8 @@
 {
-  "name":"John",
-  "surname":"Doe",
-  "nationality":"Fooenian",
-  "nif":"12345678a",
-  "age":20,
-  "bookings":[2,3,4]
+  "name": "John",
+  "surname": "Doe",
+  "nationality": "Fooenian",
+  "nif": "12345678a",
+  "age": 20,
+  "bookings": [2,3,4]
 }
